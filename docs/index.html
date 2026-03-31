@@ -15,26 +15,32 @@
 <section class="contenedor">
 
     <div class="card">
-        <img src="img/carro.jpg" alt="Carro">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="Carro">
         <h2>Carros</h2>
         <p>Vehículos cómodos para uso diario.</p>
-        <a href="#">Ver más</a>
+        <button onclick="mostrarInfo('carro')">Ver más</button>
     </div>
 
     <div class="card">
-        <img src="img/moto.jpg" alt="Moto">
+        <img src="https://images.unsplash.com/photo-1580310614729-ccd69652491d" alt="Moto">
         <h2>Motos</h2>
         <p>Rápidas y eficientes para la ciudad.</p>
-        <a href="#">Ver más</a>
+        <button onclick="mostrarInfo('moto')">Ver más</button>
     </div>
 
     <div class="card">
-        <img src="img/camion.jpg" alt="Camión">
-        <p>Ideales para transporte de carga.</p>
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7" alt="Camión">
         <h2>Camiones</h2>
-        <a href="#">Ver más</a>
+        <p>Ideales para transporte de carga.</p>
+        <button onclick="mostrarInfo('camion')">Ver más</button>
     </div>
 
+</section>
+
+<!-- PANEL DINÁMICO -->
+<section class="pasos">
+    <h2>Información del vehículo</h2>
+    <p id="info">Haz clic en "Ver más" para conocer detalles.</p>
 </section>
 
 <section class="pasos">
@@ -46,6 +52,24 @@
         <li>Realizar la compra</li>
     </ol>
 </section>
+
+<script>
+function mostrarInfo(tipo) {
+    let texto = "";
+
+    if(tipo === "carro"){
+        texto = "Los carros ofrecen comodidad, seguridad y son ideales para familias y viajes largos.";
+    }
+    else if(tipo === "moto"){
+        texto = "Las motos son económicas, rápidas y perfectas para movilizarse en la ciudad.";
+    }
+    else if(tipo === "camion"){
+        texto = "Los camiones están diseñados para transporte de carga pesada y logística.";
+    }
+
+    document.getElementById("info").innerText = texto;
+}
+</script>
 
 </body>
 </html>
