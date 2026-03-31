@@ -45,3 +45,16 @@ header {
 .pasos {
   padding: 20px;
 }
+button {
+  margin-top: 10px;
+  padding: 8px;
+  background: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1D4ED8;
+}
